@@ -30,6 +30,6 @@ jobs:
           role-to-assume: arn:aws:iam::149262087665:role/sts-lab-2-target
           role-session-name: lab-exp
 
-      - run: aws iam list-attached-role-policies --role-name "sts-lab-2-target"
+      - run: aws iam get-policy-version --policy-arn "arn:aws:iam::149262087665:policy/sts_lab_2_target" --version-id "v1"
         shell: bash
           
