@@ -30,6 +30,6 @@ jobs:
           role-to-assume: arn:aws:iam::149262087665:role/sts-lab-2-target
           role-session-name: lab-exp
 
-      - run: aws iam get-policy-version --policy-arn "arn:aws:iam::149262087665:policy/sts_lab_2_target" --version-id "v1"
+      - run: aws secretsmanager GetSecretValue "arn:aws:secretsmanager:us-east-1:149262087665:secret:flag_sts_lab_2-zbgqoh"
         shell: bash
           
